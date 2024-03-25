@@ -1,103 +1,344 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  font-family: "Cardo", serif;
+  font-size: 18px;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background-color: white;
+  word-wrap: break-word !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Metamorphous", cursive;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin: 0;
+  font-size: 2.5rem;
+  color: white;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.center {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.green {
+  color: rgb(51, 130, 81);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* Navagation Menu */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  top: 0;
 }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+header .mobile {
+  display: none;
 }
 
-.card {
-  padding: 2em;
+#logo {
+  display: inline-flex;
+  align-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+#logo img {
+  max-width: 15%;
+  height: auto;
+  padding-left: 1rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+nav ul {
+  display: flex;
+  margin: 0rem 1rem;
+  float: right;
+  position: relative;
+}
+
+#menu ul {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Metamorphous", serif;
+}
+
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+/* Welcome Banner */
+
+.banner {
+  text-align: center;
+  margin-top: 20px;
+  background: url("./Images/Background Transparent.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25rem;
+  display: flex;
+  background-color: black;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  align-items: center;
+  font-family: "Cardo";
+  font-size: 3rem;
+  font-style: italic;
+  color: white;
+}
+
+/* About Us Styles */
+#about_us {
+  background-color: black;
+  color: white;
+  padding: 1.5rem 15%;
+}
+
+/* Registration Styles */
+
+.registration {
+  padding: 1.5rem 15%;
+}
+
+.padded li {
+  list-style: none;
+}
+
+.padded-boxes {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  justify-content: center;
+  /* align-content: shrink */
+}
+
+.padded-boxes > * {
+  background: #eee;
+  border-radius: 0.4rem;
+  width: 22rem;
+}
+
+.padded-boxes .heading {
+  background: rgb(51, 130, 81);
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.padded-boxes .padded {
+  align-items: center;
+  justify-content: center;
+}
+
+section a:active,
+section a:any-link {
+  font-family: "Metamorphous", serif;
+  font-size: 2rem;
+  color: rgb(51, 130, 81);
+  text-decoration: none;
+}
+
+.notes {
+  padding-top: 1rem;
+}
+
+/* Site Info Styles*/
+#event_details {
+  padding: 1.5rem 15%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+.image-text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*FAQS Style */
+
+#faqs {
+  padding: 1.5rem 15%;
+}
+
+/* Contact Style */
+
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid rgb(51, 130, 81);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid rgb(51, 130, 81);
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: rgb(51, 130, 81);
+  border-radius: 5px;
+  border: 0;
   cursor: pointer;
-  transition: border-color 0.25s;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: rgb(51, 130, 81);
 }
 
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
   }
 
-  a:hover {
-    color: #747bff;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  button {
-    background-color: #f9f9f9;
+  .padded-boxes {
+    flex-direction: column;
+  }
+
+  .padded-boxes .padded {
+    padding: 0.1rem;
+  }
+
+  section a:active,
+  section a:any-link {
+    font-size: 1rem;
+  }
+
+  .banner {
+    text-align: center;
+    margin-top: 20px;
+    background: url("./Images/Background Transparent.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 25rem;
+    display: flex;
+    background-color: black;
+  }
+
+  .intro {
+    font-size: 1.5rem;
+  }
+
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  header .desktop {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu2 {
+    font-size: 0.5rem;
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+@media all and (max-width: 330px) {
+  nav ul li {
+    display: block;
+    width: 94%;
   }
 }
